@@ -1,0 +1,23 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "moment2, javascriptbaserad webbutveckling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: Fel\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erbj1201/dt162g.git"
+  },
+  "author": "Erika Vestin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erbj1201/dt162g/issues"
+  },
+  "homepage": "https://github.com/erbj1201/dt162g#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "joi": "^17.11.0"
+  }
+}
