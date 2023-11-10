@@ -4,7 +4,7 @@
   "description": "moment2, javascriptbaserad webbutveckling",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: Fel\" && exit 1"
+    "test": "\"Server running\""
   },
   "repository": {
     "type": "git",
