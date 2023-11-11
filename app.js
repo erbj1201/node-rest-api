@@ -1,13 +1,16 @@
-//importera joi
-const Joi = require("joi");
 // Importera express
 const express = require("express");
-//Importera fs för att kommunicera med json-fil
-const fs = require("fs").promises;
-const jsonCourses = "courses.json";
 //Skapa app med express och konfigurera att analysera förfrågningar med JSON
 const app = express();
 app.use(express.json());
+//importera joi
+const Joi = require("joi");
+//Importera fs för att kommunicera med json-fil
+const fs = require("fs").promises;
+const cors = require('cors');
+app.use(cors());
+const jsonCourses = "courses.json";
+
 
 //Validera med hjälp av Joi
 const courseSchema = Joi.object({
@@ -15,7 +18,6 @@ const courseSchema = Joi.object({
   courseName: Joi.string().min(4).required(),
   coursePeriod: Joi.number().max(4).required(),
 });
-//Routes
 app.get("/", async (req, res) => {
   try {
     const data = await fs.readFile(jsonCourses);
@@ -26,7 +28,8 @@ app.get("/", async (req, res) => {
     res.status(500).send("Tekniskt fel");
   }
 });
-//Hämta alla kurser
+
+// Hämta alla kurser
 app.get("/api/courses", async (req, res) => {
   try {
     const data = await fs.readFile(jsonCourses);
@@ -97,6 +100,7 @@ app.put("/api/courses/:_id", async (req, res) => {
     // Läs befintliga kurser från JSON-filen
     const data = await fs.readFile(jsonCourses);
     let courses = JSON.parse(data);
+
     // Hitta index för kursen med det angivna ID
     const index = courses.findIndex(
       (course) => course._id === courseIdToUpdate

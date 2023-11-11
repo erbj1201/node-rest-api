@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Moment_2</title>
+</head>
+<body>
+    <header>
+<h1>DT162G</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Alla kurser</h2>
+            <table id="courselist">
+                <tr>
+                    <th>Kurskod</th>
+                    <th>Kursnamn</th>
+                    <th>Period</th>
+                    <th>Radera</th>
+                    <th>Ändra</th>
+                </tr>
+            </table>
+            <div id="successMessage" style="color: green;"></div>
+            <div id="errorMessage" style="color: red;"></div>
+        <form>
+            <input type="hidden" id="hiddenId" value="">
+            <label for="courseId">Kurskod:</label>
+            <br>
+            <input type="text" id="courseId">
+            <br>
+            <label for="courseName">Kursnamn:</label>
+            <br>
+            <input type="text" id="courseName">
+            <br>
+            <label for="coursePeriod">Period:</label>
+            <br>
+            <input type="number" id="coursePeriod">
+            <br>
+            <input type="submit" id="addCourse" value="Lägg till">
+        </form>
+</div>
+    </main>
+    <script src="/public/courses.js"></script>
+</body>
+</html>

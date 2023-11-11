@@ -1,56 +1,8 @@
 [
   {
-    "_id": 2,
-    "courseId": "TestUPPDATERING",
-    "courseName": "Projektledning",
-    "coursePeriod": 1
-  },
-  {
-    "_id": 3,
-    "courseId": "DT071G",
-    "courseName": "Programmering i C#.NET",
-    "coursePeriod": 2
-  },
-  {
-    "_id": 4,
-    "courseId": "DT148G",
-    "courseName": "Webbutveckling för mobila enheter",
-    "coursePeriod": 2
-  },
-  {
-    "_id": 5,
-    "courseId": "DT102G",
-    "courseName": "ASP.NET med C#",
-    "coursePeriod": 3
-  },
-  {
-    "_id": 6,
-    "courseId": "IG021G",
-    "courseName": "Affärsplaner och kommersialisering",
-    "coursePeriod": 3
-  },
-  {
-    "_id": 7,
-    "courseId": "DT069G",
-    "courseName": "Multimedia för webben",
-    "coursePeriod": 4
-  },
-  {
-    "_id": 8,
-    "courseId": "DT080G",
-    "courseName": "Självständigt arbete",
-    "coursePeriod": 4
-  },
-  {
-    "_id": 10,
-    "courseId": "DT000G",
-    "courseName": "TEST KURS",
-    "coursePeriod": 1
-  },
-  {
-    "_id": 10,
-    "courseId": "DT000G",
-    "courseName": "TEST KURS",
-    "coursePeriod": 1
+    "_id": 1,
+    "courseId": "TEST",
+    "courseName": "TEST",
+    "coursePeriod": "1"
   }
 ]
