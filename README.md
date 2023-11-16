@@ -20,9 +20,17 @@ Metod       Ändpunkt            Beskrivning
 
 
 GET         /courses            Hämtar alla kurser
+
+
 GET         /courses/id         Hämtar en specifik kurs med angivet ID. 
+
+
 POST        /courses            Lagrar en ny kurs. Kräver att ett kurs-objekt skickas med. 
+
+
 PUT         /courses/id         Uppdaterar en existerande kurs med angivet ID. Kräver att ett kurs-objekt skickas med. 
+
+
 DELETE      /courses/id         Raderar en kurs med angivet ID.
 
 
