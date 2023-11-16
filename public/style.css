@@ -4,14 +4,21 @@ body {
     line-height: 1.6em;
     background-color: #f5f2f2;
     font-size: 1em;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+main{
+    width: 100%;
+    margin: auto;
 }
 .container {
     max-width: 1000px;
     width: 100%;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 1em;
+    border-radius: 2%;
     background-color: #252525;
-    margin: 0 auto;
+    margin: auto;
 } /*Headings and texts*/
 h1 { 
     text-align: center;
@@ -26,6 +33,12 @@ h1 {
     padding: 0.5em;
     font-size: 1.6em;
  }
+ h3{
+    font-size: 1.4em;
+    color: orange;
+    margin: 2em auto auto auto;
+    text-align: center;
+ }
 p { 
     margin: auto; 
     padding: 0.5em;
@@ -36,21 +49,27 @@ p {
     text-align: center;
 } 
  /*Table, colors, font mm*/
-th { 
+tr th { 
     font-weight: bold; 
     background-color: rgb(235, 184, 89);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: uppercase;
-    padding: 1em;
+    padding: 0.2em;
+    font-size: 1em;
+    margin: auto;
 }
-table {
+
+#courselist{
     border-collapse: collapse;
     background-color: #f5f2f2;
     margin: auto;
+    width: 100%;
+    max-width: 400px;
 }
 td, tr{ 
     padding: 0.8em;
-    font-size: 1.1em;
+    margin: auto;
+    font-size: 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-bottom: rgba(235, 184, 89, 0.479) 1px solid;
 }
@@ -58,25 +77,69 @@ td, tr{
 label{
     margin: auto;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.2em;
  }
  form{
-    margin: auto;
+    display: grid;
+    align-items: center;
+    padding: 3em 2em;
+    margin: 3em auto auto auto;
     width: 100%;
+    max-width: 400px;
+    background-color: #f5f2f20d;
+    border-radius: 5% 5% 0 0;
  }
  input[type=text], input[type=number]{
     padding: 0.5em;
-    font-size: 1.2em;
-    margin: 0.5em 0;
+    font-size: 1.1em;
+    margin: 0.1em auto;
  } 
  input[type=submit]{
     background-color: orange;
     color: #252525;
     padding: 0.5em 1em;
-    font-size: 1.2em;
+    font-size: 1.1em;
     border: none;
+    margin: auto;
  }
  input[type=submit]:hover{
     background-color: orangered;
     border: none;
+    margin: auto;
+    border-radius: 5%;
+ }
+ .delete{
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 0.8em;
+    border-radius: 5%;
+    margin:auto;
+    width: 100%;
+ }
+ .change{
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 0.8em;
+    border-radius: 5%;
+    margin: auto;
+    width: 100%;
+ }
+ .delete:hover, .change:hover{
+border: none;
+background-color: #252525;
+color: white;
+ }
+
+ #message{
+    color: white;
+    font-family: 1.5em;
+    text-align: center;
+ }
+ #errorMessage{
+   text-align: center;
+   font-size: 1.4em;
+   padding: 1em;
+   color: red;
  }

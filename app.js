@@ -30,7 +30,7 @@ app.get("/", async (req, res) => {
 });
 
 // Hämta alla kurser
-app.get("/api/courses", async (req, res) => {
+app.get("/courses", async (req, res) => {
   try {
     const data = await fs.readFile(jsonCourses);
     const courses = JSON.parse(data);
@@ -41,7 +41,7 @@ app.get("/api/courses", async (req, res) => {
   }
 });
 //Hämta specifik kurs med id
-app.get("/api/courses/:id", async (req, res) => {
+app.get("/courses/:id", async (req, res) => {
   try {
     // Läs befintliga kurser från JSON-filen
     const data = await fs.readFile(jsonCourses);
@@ -59,7 +59,7 @@ app.get("/api/courses/:id", async (req, res) => {
 });
 
 //Lägg till kurs
-app.post("/api/courses", async (req, res) => {
+app.post("/courses", async (req, res) => {
   try {
     const { courseId, courseName, coursePeriod } = req.body;
     // Validate the request body using the defined schema
@@ -93,7 +93,7 @@ app.post("/api/courses", async (req, res) => {
 });
 
 // Uppdatera kurs med specifikt id
-app.put("/api/courses/:_id", async (req, res) => {
+app.put("/courses/:_id", async (req, res) => {
   try {
     const courseIdToUpdate = parseInt(req.params._id);
     const { courseId, courseName, coursePeriod } = req.body;
@@ -124,7 +124,7 @@ app.put("/api/courses/:_id", async (req, res) => {
 });
 
 //Radera kurs med specifikt id
-app.delete("/api/courses/:_id", async (req, res) => {
+app.delete("/courses/:_id", async (req, res) => {
   try {
     const courseIdToDelete = parseInt(req.params._id);
     // Läs befintliga kurser från JSON-filen
