@@ -11,7 +11,6 @@ const cors = require('cors');
 app.use(cors());
 const jsonCourses = "courses.json";
 
-
 //Validera med hjälp av Joi
 const courseSchema = Joi.object({
   courseId: Joi.string().min(4).required(),
@@ -20,6 +19,7 @@ const courseSchema = Joi.object({
 });
 app.get("/", async (req, res) => {
   try {
+    //Läs data från json-fil
     const data = await fs.readFile(jsonCourses);
     const courses = JSON.parse(data);
     res.send(courses);
@@ -32,6 +32,7 @@ app.get("/", async (req, res) => {
 // Hämta alla kurser
 app.get("/courses", async (req, res) => {
   try {
+    //Läs data från json-fil
     const data = await fs.readFile(jsonCourses);
     const courses = JSON.parse(data);
     res.send(courses);
@@ -81,9 +82,9 @@ app.post("/courses", async (req, res) => {
       courseName,
       coursePeriod,
     };
-    // Add the new course to the existing courses array
+    // Lägg till kurs i array
     courses.push(newCourse);
-    // Write the updated courses array back to the JSON file
+    // Skriv in ny kurs i JSON filen
     await fs.writeFile(jsonCourses, JSON.stringify(courses, null, 2));
     res.send(`Kurs tillagd: ${JSON.stringify(newCourse)}`);
   } catch (error) {
