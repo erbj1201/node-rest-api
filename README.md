@@ -17,7 +17,7 @@ Webbtjänsten har full CRUD-funktionalitet. Det går att hämta alla kurser, hä
 Klientapplikationen är skapad med egenskriven HTML-kod och CSS-kod. Kommunikation med API:t sker med hjälpa av Ajax-anrop med metoden Fetch.
 
 
-### Endpoints och användning
+## Endpoints och användning
 
 
 Metod       Ändpunkt            Beskrivning
@@ -38,7 +38,7 @@ PUT         /courses/id         Uppdaterar en existerande kurs med angivet ID. K
 DELETE      /courses/id         Raderar en kurs med angivet ID.
 
 
-#### Format på kurs-objekt 
+### Format på kurs-objekt 
 
  {
         "_id": 2,
